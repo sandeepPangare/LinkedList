@@ -37,5 +37,10 @@ public class LinkedList {
             this.tail.next = newNode;
             tail = newNode;
         }
-}
+    }
+    public void insertInBetween(Node previousNode ,Node newNode){
+        Node tempNode = previousNode.next;
+        previousNode.next = newNode;
+        newNode.next = tempNode;
+    }
 }
